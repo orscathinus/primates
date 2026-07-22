@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An interactive journey through 66 million years of primate evolution.">
+  <meta name="theme-color" content="#07150f">
+  <title>Branching Origins — Primate Evolution</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🌿%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/styles.css">
+  <script defer src="js/data.js"></script>
+  <script defer src="js/main.js"></script>
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="top">
+    <a class="brand" href="index.html" aria-label="Branching Origins home">
+      <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+      <span><strong>Branching</strong> Origins</span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+      <span></span><span></span><span></span><span class="sr-only">Open navigation</span>
+    </button>
+    <nav class="primary-nav" id="primary-nav" aria-label="Primary navigation">
+      <a href="index.html" data-nav="home">Home</a>
+      <a href="tree.html" data-nav="tree">Family Tree</a>
+      <a href="timeline.html" data-nav="timeline">Timeline</a>
+      <a href="species.html" data-nav="species">Species</a>
+      <a href="anatomy.html" data-nav="anatomy">Adaptations</a>
+      <a href="sources.html" data-nav="sources">Sources</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero home-hero">
+      <div class="hero-noise" aria-hidden="true"></div>
+      <div class="hero-orbit orbit-one" aria-hidden="true"></div>
+      <div class="hero-orbit orbit-two" aria-hidden="true"></div>
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span></span> 66 million years of branching history</p>
+        <h1>We did not climb a ladder.<br><em>We grew on a tree.</em></h1>
+        <p class="hero-lede">Trace the evolution of primates from small Paleocene mammals to lemurs, monkeys, apes, and humans—without turning a complex, branching history into a straight line.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="tree.html">Explore the family tree <span aria-hidden="true">↗</span></a>
+          <a class="button button-ghost" href="timeline.html">Travel through time</a>
+        </div>
+        <div class="hero-facts" aria-label="Key facts">
+          <div><strong data-counter="66">0</strong><span>million years explored</span></div>
+          <div><strong data-counter="30">0</strong><span>featured taxa and clades</span></div>
+          <div><strong data-counter="6">0</strong><span>interactive learning paths</span></div>
+        </div>
+      </div>
+
+      <div class="hero-tree-wrap reveal" aria-label="Decorative branching evolutionary tree">
+        <svg class="hero-tree" viewBox="0 0 620 660" role="img" aria-labelledby="hero-tree-title hero-tree-desc">
+          <title id="hero-tree-title">A stylized evolutionary tree</title>
+          <desc id="hero-tree-desc">Branches separate toward lemurs, tarsiers, monkeys, apes, and humans.</desc>
+          <defs>
+            <linearGradient id="trunkGradient" x1="0" y1="1" x2="1" y2="0">
+              <stop offset="0" stop-color="#c49b60"/>
+              <stop offset="1" stop-color="#f2d39b"/>
+            </linearGradient>
+            <filter id="glow">
+              <feGaussianBlur stdDeviation="7" result="blur"/>
+              <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
+          <g class="tree-lines" fill="none" stroke="url(#trunkGradient)" stroke-linecap="round">
+            <path class="draw-path path-main" d="M310 620 C300 535 315 486 286 422 C259 362 263 311 278 245 C291 190 269 126 250 73"/>
+            <path class="draw-path" d="M288 430 C226 402 189 353 160 288 C139 242 98 220 61 209"/>
+            <path class="draw-path" d="M274 355 C331 322 373 281 393 227 C413 174 455 147 507 126"/>
+            <path class="draw-path" d="M278 245 C230 213 201 179 195 139"/>
+            <path class="draw-path" d="M387 242 C453 245 495 228 548 199"/>
+            <path class="draw-path" d="M160 288 C113 306 79 335 49 377"/>
+            <path class="draw-path" d="M393 227 C387 174 369 130 333 91"/>
+          </g>
+          <g class="tree-node node-root" transform="translate(310 620)"><circle r="13"/><text x="22" y="6">Early primate relatives</text></g>
+          <g class="tree-node" transform="translate(160 288)"><circle r="10"/><text x="-15" y="-20" text-anchor="middle">Strepsirrhines</text></g>
+          <g class="tree-node" transform="translate(278 245)"><circle r="10"/><text x="-18" y="23" text-anchor="end">Haplorhines</text></g>
+          <g class="tree-node leaf" transform="translate(61 209)"><circle r="13"/><text x="-2" y="-23" text-anchor="middle">Lemurs & lorises</text></g>
+          <g class="tree-node leaf" transform="translate(195 139)"><circle r="13"/><text x="-3" y="-23" text-anchor="middle">Tarsiers</text></g>
+          <g class="tree-node leaf" transform="translate(49 377)"><circle r="13"/><text x="-2" y="29" text-anchor="middle">Madagascar</text></g>
+          <g class="tree-node" transform="translate(393 227)"><circle r="10"/><text x="18" y="-12">Anthropoids</text></g>
+          <g class="tree-node leaf" transform="translate(507 126)"><circle r="13"/><text x="0" y="-23" text-anchor="middle">New World monkeys</text></g>
+          <g class="tree-node leaf" transform="translate(548 199)"><circle r="13"/><text x="15" y="27" text-anchor="middle">Old World monkeys</text></g>
+          <g class="tree-node leaf human-node" transform="translate(333 91)"><circle r="15" filter="url(#glow)"/><text x="0" y="-26" text-anchor="middle">Apes & humans</text></g>
+        </svg>
+        <div class="tree-callout callout-one"><span>55 Ma</span><strong>Early crown primates diversify</strong></div>
+        <div class="tree-callout callout-two"><span>~25 Ma</span><strong>Monkeys and apes diverge</strong></div>
+        <div class="tree-callout callout-three"><span>8–6 Ma</span><strong>Human and chimp lineages split</strong></div>
+      </div>
+    </section>
+
+    <section class="section section-intro">
+      <div class="section-heading reveal">
+        <p class="eyebrow"><span></span> A better mental model</p>
+        <h2>Evolution branches, overlaps, and leaves gaps.</h2>
+        <p>Fossils are samples from a vast, incomplete record. Many featured species are close relatives—not proven direct ancestors—and scientific interpretations change when new evidence appears.</p>
+      </div>
+      <div class="principle-grid">
+        <article class="principle-card reveal">
+          <span class="card-number">01</span>
+          <div class="principle-icon" aria-hidden="true">⌁</div>
+          <h3>No living species is “primitive”</h3>
+          <p>Lemurs, monkeys, apes, and humans have all been evolving for the same amount of time since their shared ancestors.</p>
+        </article>
+        <article class="principle-card reveal">
+          <span class="card-number">02</span>
+          <div class="principle-icon" aria-hidden="true">⑂</div>
+          <h3>Traits evolve in mosaics</h3>
+          <p>Grasping hands, stereoscopic vision, larger brains, tail loss, and bipedalism appeared at different times and in different combinations.</p>
+        </article>
+        <article class="principle-card reveal">
+          <span class="card-number">03</span>
+          <div class="principle-icon" aria-hidden="true">◌</div>
+          <h3>Uncertainty is part of the science</h3>
+          <p>Dates are often ranges, family-tree positions can be debated, and a single new skeleton can rearrange old hypotheses.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section era-section">
+      <div class="section-heading split-heading reveal">
+        <div>
+          <p class="eyebrow"><span></span> Deep-time overview</p>
+          <h2>Four eras. Countless experiments.</h2>
+        </div>
+        <p>Move from the shadow of the dinosaurs through tropical radiations, the age of apes, and the recent spread of our own genus.</p>
+      </div>
+      <div class="era-track reveal">
+        <article class="era-card paleocene">
+          <div class="era-time">66–56 Ma</div>
+          <p class="era-kicker">Paleocene</p>
+          <h3>Near the roots</h3>
+          <p>Plesiadapiform mammals occupied arboreal niches soon after the end-Cretaceous extinction. Their exact relationship to crown primates remains debated.</p>
+          <a href="timeline.html?era=paleocene">Enter the Paleocene <span>→</span></a>
+        </article>
+        <article class="era-card eocene">
+          <div class="era-time">56–34 Ma</div>
+          <p class="era-kicker">Eocene</p>
+          <h3>True primates radiate</h3>
+          <p>Early strepsirrhine- and haplorhine-like primates spread across warm northern forests. Grasping, leaping, and visual specialization flourished.</p>
+          <a href="timeline.html?era=eocene">Enter the Eocene <span>→</span></a>
+        </article>
+        <article class="era-card miocene">
+          <div class="era-time">23–5.3 Ma</div>
+          <p class="era-kicker">Miocene</p>
+          <h3>The age of apes</h3>
+          <p>Apes became diverse across Africa and Eurasia, experimenting with body plans and locomotion before the earliest known hominins appeared.</p>
+          <a href="timeline.html?era=miocene">Enter the Miocene <span>→</span></a>
+        </article>
+        <article class="era-card quaternary">
+          <div class="era-time">2.58 Ma–now</div>
+          <p class="era-kicker">Quaternary</p>
+          <h3>Many human branches</h3>
+          <p>Multiple Homo lineages lived at the same time, moved across continents, exchanged genes, and eventually left Homo sapiens as the only survivor.</p>
+          <a href="timeline.html?era=quaternary">Enter the Quaternary <span>→</span></a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section feature-band">
+      <div class="feature-band-art" aria-hidden="true">
+        <div class="fossil-ring ring-a"></div><div class="fossil-ring ring-b"></div><div class="fossil-ring ring-c"></div>
+        <div class="skull-mark"><span></span><span></span><span></span></div>
+      </div>
+      <div class="feature-band-copy reveal">
+        <p class="eyebrow light"><span></span> Fossils + genes + anatomy</p>
+        <h2>How do scientists reconstruct a history no one witnessed?</h2>
+        <p>No single kind of evidence is enough. Researchers compare bones and teeth, date rocks, study living primates, reconstruct ancient environments, and use DNA to estimate relationships and divergence times.</p>
+        <a class="button button-light" href="anatomy.html">Examine the evidence</a>
+      </div>
+    </section>
+
+    <section class="section explorer-preview">
+      <div class="section-heading split-heading reveal">
+        <div>
+          <p class="eyebrow"><span></span> Meet the branches</p>
+          <h2>Start with six turning points.</h2>
+        </div>
+        <a class="text-link" href="species.html">View every featured taxon <span>→</span></a>
+      </div>
+      <div class="taxa-preview" id="featured-taxa"></div>
+    </section>
+
+    <section class="section question-section reveal">
+      <p class="eyebrow centered"><span></span> Continue exploring</p>
+      <h2>Which branch will you follow?</h2>
+      <div class="question-links">
+        <a href="tree.html"><span>01</span><strong>See relationships</strong><em>Interactive family tree</em></a>
+        <a href="timeline.html"><span>02</span><strong>See change through time</strong><em>Filterable chronology</em></a>
+        <a href="species.html"><span>03</span><strong>Meet fossil species</strong><em>Searchable explorer</em></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span><span><strong>Branching</strong> Origins</span></a>
+      <p>An educational, evidence-centered guide to primate evolution.</p>
+    </div>
+    <div class="footer-links">
+      <div><strong>Explore</strong><a href="tree.html">Family Tree</a><a href="timeline.html">Timeline</a><a href="species.html">Species</a></div>
+      <div><strong>Learn</strong><a href="anatomy.html">Adaptations</a><a href="sources.html">Sources</a><a href="#top">Back to top</a></div>
+    </div>
+    <p class="footer-note">Dates and relationships are simplified for learning and marked where interpretations remain uncertain. <span>© <span data-year></span> Branching Origins</span></p>
+  </footer>
+</body>
+</html>

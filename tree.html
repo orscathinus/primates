@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore an interactive, collapsible primate evolutionary family tree.">
+  <meta name="theme-color" content="#07150f">
+  <title>Interactive Family Tree — Branching Origins</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🌿%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/styles.css">
+  <script defer src="js/data.js"></script>
+  <script defer src="js/main.js"></script>
+  <script defer src="js/tree.js"></script>
+</head>
+<body data-page="tree">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="top">
+    <a class="brand" href="index.html" aria-label="Branching Origins home"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span><span><strong>Branching</strong> Origins</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span><span class="sr-only">Open navigation</span></button>
+    <nav class="primary-nav" id="primary-nav" aria-label="Primary navigation"><a href="index.html" data-nav="home">Home</a><a href="tree.html" data-nav="tree">Family Tree</a><a href="timeline.html" data-nav="timeline">Timeline</a><a href="species.html" data-nav="species">Species</a><a href="anatomy.html" data-nav="anatomy">Adaptations</a><a href="sources.html" data-nav="sources">Sources</a></nav>
+  </header>
+
+  <main id="main" class="tool-page">
+    <section class="page-hero compact-hero">
+      <div class="page-hero-copy reveal">
+        <p class="eyebrow"><span></span> Interactive phylogeny</p>
+        <h1>The primate family tree</h1>
+        <p>Click branch points to expand or collapse them. Drag to pan, scroll to zoom, and select a fossil or living group to learn more.</p>
+      </div>
+      <div class="page-hero-note reveal"><strong>Remember:</strong> this is a simplified teaching tree. Dashed relationships and “near” labels signal uncertainty.</div>
+    </section>
+
+    <section class="tree-workspace" aria-label="Interactive primate tree workspace">
+      <aside class="tree-sidebar">
+        <div class="sidebar-block">
+          <label for="tree-search">Find a branch</label>
+          <div class="search-field"><span aria-hidden="true">⌕</span><input id="tree-search" type="search" placeholder="Try ‘apes’ or ‘tarsiers’" autocomplete="off"></div>
+          <p class="field-help" id="tree-search-status" aria-live="polite">Search by common or scientific name.</p>
+        </div>
+        <div class="sidebar-block">
+          <p class="sidebar-label">Display</p>
+          <button class="sidebar-action" id="expand-all" type="button"><span>＋</span> Expand all branches</button>
+          <button class="sidebar-action" id="collapse-all" type="button"><span>−</span> Collapse major branches</button>
+          <button class="sidebar-action" id="reset-view" type="button"><span>⌂</span> Reset view</button>
+        </div>
+        <div class="sidebar-block legend-block">
+          <p class="sidebar-label">Branch colors</p>
+          <div class="legend-list">
+            <span><i class="legend-dot root"></i>Early relatives</span>
+            <span><i class="legend-dot strepsirrhine"></i>Strepsirrhines</span>
+            <span><i class="legend-dot haplorhine"></i>Haplorhines</span>
+            <span><i class="legend-dot anthropoid"></i>Monkeys</span>
+            <span><i class="legend-dot ape"></i>Apes</span>
+            <span><i class="legend-dot hominin"></i>Hominins</span>
+          </div>
+        </div>
+        <div class="sidebar-block">
+          <p class="sidebar-label">How to read it</p>
+          <p class="small-copy">Branch points represent shared ancestry, not one species abruptly changing into another. Horizontal position indicates branching depth, not exact time.</p>
+        </div>
+      </aside>
+
+      <div class="tree-canvas-wrap">
+        <div class="tree-toolbar" aria-label="Tree zoom controls">
+          <button id="zoom-in" type="button" aria-label="Zoom in">＋</button>
+          <button id="zoom-out" type="button" aria-label="Zoom out">−</button>
+          <span id="zoom-level">100%</span>
+        </div>
+        <svg id="primate-tree" class="primate-tree" role="img" aria-labelledby="tree-title tree-desc">
+          <title id="tree-title">Interactive primate evolutionary family tree</title>
+          <desc id="tree-desc">A branching diagram from early primate relatives to living lemurs, monkeys, apes, and humans.</desc>
+          <g id="tree-stage"></g>
+        </svg>
+        <div class="tree-empty" id="tree-empty" hidden>No matching branch was found.</div>
+        <div class="tree-tip">Drag to pan · Scroll to zoom · Click circles to open branches</div>
+      </div>
+    </section>
+
+    <section class="tree-explainer section">
+      <div class="section-heading split-heading reveal">
+        <div><p class="eyebrow"><span></span> Reading phylogenies</p><h2>Three mistakes to avoid</h2></div>
+        <p>A family tree is a hypothesis about relationships. It does not rank animals from “lower” to “higher,” and the order of tips can rotate without changing the relationships.</p>
+      </div>
+      <div class="mini-card-grid">
+        <article class="mini-card reveal"><span>01</span><h3>Humans did not evolve from chimpanzees</h3><p>Both lineages descend from an extinct common ancestor and have changed independently since their split.</p></article>
+        <article class="mini-card reveal"><span>02</span><h3>Fossils are rarely proven ancestors</h3><p>A fossil taxon may sit close to an ancestral population while still representing a side branch.</p></article>
+        <article class="mini-card reveal"><span>03</span><h3>Branch length here is simplified</h3><p>Use the timeline for chronological scale; this view prioritizes relationships and readability.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="footer-brand"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span><span><strong>Branching</strong> Origins</span></a><p>An educational, evidence-centered guide to primate evolution.</p></div><div class="footer-links"><div><strong>Explore</strong><a href="tree.html">Family Tree</a><a href="timeline.html">Timeline</a><a href="species.html">Species</a></div><div><strong>Learn</strong><a href="anatomy.html">Adaptations</a><a href="sources.html">Sources</a><a href="#top">Back to top</a></div></div><p class="footer-note">Dates and relationships are simplified for learning and marked where interpretations remain uncertain. <span>© <span data-year></span> Branching Origins</span></p></footer>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A filterable timeline of major events in primate evolution.">
+  <meta name="theme-color" content="#07150f">
+  <title>Evolution Timeline — Branching Origins</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🌿%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/styles.css">
+  <script defer src="js/data.js"></script>
+  <script defer src="js/main.js"></script>
+  <script defer src="js/timeline.js"></script>
+</head>
+<body data-page="timeline">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="top"><a class="brand" href="index.html" aria-label="Branching Origins home"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span><span><strong>Branching</strong> Origins</span></a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span><span class="sr-only">Open navigation</span></button><nav class="primary-nav" id="primary-nav" aria-label="Primary navigation"><a href="index.html" data-nav="home">Home</a><a href="tree.html" data-nav="tree">Family Tree</a><a href="timeline.html" data-nav="timeline">Timeline</a><a href="species.html" data-nav="species">Species</a><a href="anatomy.html" data-nav="anatomy">Adaptations</a><a href="sources.html" data-nav="sources">Sources</a></nav></header>
+
+  <main id="main" class="tool-page">
+    <section class="page-hero timeline-hero">
+      <div class="page-hero-copy reveal"><p class="eyebrow"><span></span> Deep-time chronology</p><h1>Sixty-six million years, one branching story</h1><p>Filter major fossils, divergences, migrations, and adaptations. Dates are approximate, and an event’s placement does not imply a direct line to living species.</p></div>
+      <div class="time-scale-art reveal" aria-hidden="true"><div><span>66</span><i></i></div><div><span>50</span><i></i></div><div><span>25</span><i></i></div><div><span>10</span><i></i></div><div><span>0</span><i></i></div><b>millions of years ago</b></div>
+    </section>
+
+    <section class="timeline-controls" aria-label="Timeline filters">
+      <div class="control-row">
+        <div class="filter-buttons" id="timeline-filters" role="group" aria-label="Filter by evolutionary group">
+          <button class="active" data-filter="all" type="button">All</button>
+          <button data-filter="early" type="button">Early relatives</button>
+          <button data-filter="strepsirrhine" type="button">Strepsirrhines</button>
+          <button data-filter="haplorhine" type="button">Haplorhines</button>
+          <button data-filter="anthropoid" type="button">Monkeys</button>
+          <button data-filter="ape" type="button">Apes</button>
+          <button data-filter="hominin" type="button">Hominins</button>
+        </div>
+        <div class="search-field timeline-search"><span aria-hidden="true">⌕</span><input id="timeline-search" type="search" placeholder="Search events"></div>
+      </div>
+      <div class="range-control">
+        <label for="age-range">Show events from <strong><span id="age-range-value">66</span> Ma</strong> to the present</label>
+        <input id="age-range" type="range" min="1" max="66" value="66" step="1">
+        <div class="range-labels"><span>1 Ma</span><span>66 Ma</span></div>
+      </div>
+    </section>
+
+    <section class="timeline-layout">
+      <aside class="era-index" aria-label="Geologic era index">
+        <button data-era="paleocene" type="button"><span>66–56 Ma</span><strong>Paleocene</strong></button>
+        <button data-era="eocene" type="button"><span>56–34 Ma</span><strong>Eocene</strong></button>
+        <button data-era="oligocene" type="button"><span>34–23 Ma</span><strong>Oligocene</strong></button>
+        <button data-era="miocene" type="button"><span>23–5.3 Ma</span><strong>Miocene</strong></button>
+        <button data-era="pliocene" type="button"><span>5.3–2.58 Ma</span><strong>Pliocene</strong></button>
+        <button data-era="quaternary" type="button"><span>2.58 Ma–now</span><strong>Quaternary</strong></button>
+      </aside>
+      <div class="timeline-stream" id="timeline-stream" aria-live="polite"></div>
+    </section>
+
+    <section class="timeline-note section reveal">
+      <div><span class="note-symbol">≈</span><h2>Why so many approximate dates?</h2></div>
+      <p>Fossils are dated from surrounding rocks and sediments, molecular clocks depend on assumptions and calibrations, and evolutionary splits occur across populations—not at a single instant. Ranges are often more honest than exact numbers.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="footer-brand"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span><span><strong>Branching</strong> Origins</span></a><p>An educational, evidence-centered guide to primate evolution.</p></div><div class="footer-links"><div><strong>Explore</strong><a href="tree.html">Family Tree</a><a href="timeline.html">Timeline</a><a href="species.html">Species</a></div><div><strong>Learn</strong><a href="anatomy.html">Adaptations</a><a href="sources.html">Sources</a><a href="#top">Back to top</a></div></div><p class="footer-note">Dates and relationships are simplified for learning and marked where interpretations remain uncertain. <span>© <span data-year></span> Branching Origins</span></p></footer>
+</body>
+</html>
